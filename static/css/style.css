@@ -1,0 +1,16 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #0c161c;
+  color: #eee;
+}
+
+a,a:visited {
+  color: #6ef;
+}
+a: hover {
+  text-decoration: none;
+}
