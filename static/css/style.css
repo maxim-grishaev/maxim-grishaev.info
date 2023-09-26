@@ -18,13 +18,13 @@ strong {
 
 a,a:visited {
   color: #6ef;
+  text-decoration: underline;
 }
-a: hover {
+a:hover {
   text-decoration: none;
 }
 
 .container {
-  height: 100%;
   display: flex;
   flex-direction: column;
   padding: 3rem;
@@ -40,4 +40,77 @@ p {
   margin-bottom: .3rem;
   font-size: 85%;
   width: 60%;
+}
+
+ul.links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+ul.links li {
+  display: inline-block;
+  margin: 0 1rem 0 0;
+}
+.links {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.links a {
+  display: flex;
+  flex-direction: row;
+}
+.links a {
+  transition:
+    background-color .2s ease-in-out,
+    color .2s ease-in-out;
+  background-color: #ffffff00;
+  border-radius: 1rem;
+  padding: .3rem .4rem;
+  margin-right: 1rem;
+}
+
+.links a:hover {
+  background-color: #fff;
+  color: #0c161c;
+}
+
+.icon {
+  width: 1rem;
+  margin-right: .5rem;
+  vertical-align: middle;
+  color: #fff;
+  fill: #fff;
+}
+.links a:hover .icon {
+  fill: #0c161c;
+  animation: color-change 1s infinite alternate ease-in-out;
+}
+@keyframes color-change {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.wave {
+  animation-name: wave;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+.wave:hover {
+  animation-iteration-count: infinite;
+}
+
+@keyframes wave {
+  0% { transform: rotate( 0.0deg) }
+ 10% { transform: rotate(14.0deg) }
+ 20% { transform: rotate(-8.0deg) }
+ 30% { transform: rotate(14.0deg) }
+ 40% { transform: rotate(-4.0deg) }
+ 50% { transform: rotate(10.0deg) }
+ 60% { transform: rotate( 0.0deg) }
+100% { transform: rotate( 0.0deg) }
 }
