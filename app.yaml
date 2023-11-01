@@ -1,1 +1,21 @@
 runtime: go121
+app_engine_apis: true
+
+handlers:
+  - url: /
+    secure: always
+    static_files: client/index.html
+    upload: client/index.html
+
+  - url: /favicon.ico
+    secure: always
+    static_files: client/favicon.ico
+    upload: client/favicon.ico
+
+  - url: /static
+    secure: always
+    static_dir: client/static
+
+  - url: /.*
+    secure: always
+    script: auto

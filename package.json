@@ -1,0 +1,16 @@
+{
+  "name": "maxim-grishaev.info",
+  "version": "1.0.0",
+  "description": "Websote",
+  "main": "./dist/aws/infra/index.js",
+  "workspaces": [
+    "./aws/cdk",
+    "./client"
+  ],
+  "scripts": {
+    "test": "jest",
+    "gcp:logs": "gcloud app logs tail -s default",
+    "gcp:deploy": "gcloud app deploy"
+  },
+  "author": "Maxim Grishaev<maxim@grishaev.info>"
+}
