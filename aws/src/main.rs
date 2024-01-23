@@ -60,4 +60,9 @@
 // //     }
 // // }
 
-fn main() {}
+fn main() {
+    tmpl! {
+        <foo>abc</foo>
+        one two three
+    }
+}
