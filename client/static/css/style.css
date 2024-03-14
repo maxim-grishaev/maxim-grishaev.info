@@ -9,14 +9,25 @@ body {
   background-color: #0c161c;
   color: #eee;
   font-weight: 200;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0 0 1rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin: 0 0 1rem;
 }
 
 strong {
   font-weight: 500;
 }
 
-a,a:visited {
+a,
+a:visited {
   color: #6ef;
   text-decoration: underline;
 }
@@ -32,43 +43,12 @@ a:hover {
 p {
   margin: 0 0 1rem;
 }
-.cv {
-  border-left: 3px solid #ffffff66;
-  padding-left: 2rem;
-}
-.cv p {
-  margin-bottom: .3rem;
-  font-size: 85%;
-  width: 60%;
-}
 
-ul.links {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1rem;
-}
-ul.links li {
-  display: inline-block;
-  margin: 0 1rem 0 0;
-}
-.links {
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-}
 .links a {
-  display: flex;
-  flex-direction: row;
-}
-.links a {
-  transition:
-    background-color .2s ease-in-out,
-    color .2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   background-color: #ffffff00;
   border-radius: 1rem;
-  padding: .3rem .4rem;
-  margin-right: 1rem;
+  padding: 0.3rem 0.4rem;
 }
 
 .links a:hover {
@@ -78,7 +58,7 @@ ul.links li {
 
 .icon {
   width: 1rem;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
   vertical-align: middle;
   color: #fff;
   fill: #fff;
@@ -88,29 +68,51 @@ ul.links li {
   animation: color-change 1s infinite alternate ease-in-out;
 }
 @keyframes color-change {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
-.wave {
+.wave .hand {
   animation-name: wave;
   animation-duration: 1.5s;
   animation-iteration-count: 1;
   transform-origin: 70% 70%;
   display: inline-block;
 }
-.wave:hover {
+.wave:hover .hand {
   animation-iteration-count: infinite;
 }
 
 @keyframes wave {
-  0% { transform: rotate( 0.0deg) }
- 10% { transform: rotate(14.0deg) }
- 20% { transform: rotate(-8.0deg) }
- 30% { transform: rotate(14.0deg) }
- 40% { transform: rotate(-4.0deg) }
- 50% { transform: rotate(10.0deg) }
- 60% { transform: rotate( 0.0deg) }
-100% { transform: rotate( 0.0deg) }
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
